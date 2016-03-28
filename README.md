@@ -1,2 +1,2 @@
 # clojure_game
-Clojure trainig
+Clojure training
