@@ -16,4 +16,6 @@
 (def ultralisk (create-character "Your Mom" 9))
 
 (:attack ultralisk)
+(:defence player)
 (calc/take-dmg ultralisk player)
+(:hp player)

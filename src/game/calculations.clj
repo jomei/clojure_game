@@ -22,19 +22,21 @@
       )
     ))
 
+
 (defn cast-to-zero [n]
   (if (neg? n) 0 n))
 
-(defn base-damage [attack attack]
-  (- attack defence))
+(defn base-damage [attack defence]
+  (cast-to-zero (- attack defence)))
+
+(base-damage 10 5)
 
 (defn dice-sides [lvl]
   (if (> lvl 5) 4 6))
-
 
 (defn take-dmg [from to]
   (let [bdmg (base-damage (:attack from) (:defence to))
         sides (dice-sides (:lvl from))
         rdmg (real-dmg bdmg sides)]
-    [rdmg (update-in to :hp #(- % rdmg))])
+    [rdmg (update-in to [:hp] #(- % rdmg))])
   )
