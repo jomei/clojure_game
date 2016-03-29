@@ -29,14 +29,15 @@ Actual HP is %d"
 (defn print-battle-log [character damage]
   (let [name (:name character)
         hp (:hp character)
-        s (format log-templete name damage hp)]))
+        s (format log-templete name damage hp)]
+    (println s)))
 
 (defn print-winner [player-hp enemy-hp]
   (if (>= player-hp enemy-hp)
     (println "Player won")
     (println "Enemy won")))
 
-(defn game-logic [config]
+(defn game [config]
   (loop [player (:player config)
          enemy (:enemy config)
          round 1]
@@ -53,4 +54,3 @@ Actual HP is %d"
           )))))
 
 
-(game-logic config)
