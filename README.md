@@ -11,7 +11,7 @@ Let's do some clojure training!
 Config is a hash with two fields *player* and *enemy*, each of them is a character.
 To generate character run `(create-character "name" int-lvl)` e.g `(create-character "Foo" 12)`
 
-You can make your own confg with
+You can make your own config with
 ```
 (def config
   {
@@ -22,6 +22,6 @@ You can make your own confg with
 ```
 
 
-Game have 3 predefined character *Jim Raynor*, *zerling* and *ultralisk*
+Game have 3 predefined character *Jim Raynor*, *zergling* and *ultralisk*
 
 Enjoy!
