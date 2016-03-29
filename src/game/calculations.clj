@@ -3,7 +3,7 @@
 
 (defn attack [lvl]
   "compute attack according to lvl by formula"
-  (* lvl 2))
+  (* lvl 6))
 
 (defn defence [lvl]
   "compute attack according to lvl by formula"
@@ -18,7 +18,7 @@
     (cond
       (<= rd s) (int (/ base 2))
       (= rd s) (* base 2)
-      (> rd s) (base)
+      (> rd s) base
       )
     ))
 
