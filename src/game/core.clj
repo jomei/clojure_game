@@ -15,10 +15,6 @@
 (def zergling (create-character "Crazy Dog" 3))
 (def ultralisk (create-character "Your Mom" 9))
 
-(:attack ultralisk)
-(:defence player)
-(calc/take-dmg ultralisk player)
-
 (def config
   {
     :player player
@@ -33,9 +29,7 @@ Actual HP is %d"
 (defn print-battle-log [character damage]
   (let [name (:name character)
         hp (:hp character)
-        s (format log-templete name damage hp)]
-    (println s)
-    ))
+        s (format log-templete name damage hp)]))
 
 (defn print-winner [player-hp enemy-hp]
   (if (>= player-hp enemy-hp)
@@ -57,5 +51,6 @@ Actual HP is %d"
           (print-battle-log (en->pl 1) (en->pl 0))
           (recur (en->pl 1) (pl->en 1) (inc round))
           )))))
+
 
 (game-logic config)

@@ -29,8 +29,6 @@
 (defn base-damage [attack defence]
   (cast-to-zero (- attack defence)))
 
-(base-damage 10 5)
-
 (defn dice-sides [lvl]
   (if (> lvl 5) 4 6))
 
