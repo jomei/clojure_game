@@ -1,12 +1,14 @@
 (ns game.calculations
   (:require [game.dice :as dice]))
 
-(defn attack [lvl]
+(defn attack
   "compute attack according to lvl by formula"
+  [lvl]
   (* lvl 6))
 
-(defn defence [lvl]
+(defn defence
   "compute attack according to lvl by formula"
+  [lvl]
   (int (* lvl 1.5)))
 
 (defn hp [lvl]
